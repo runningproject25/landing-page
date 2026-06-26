@@ -5,9 +5,8 @@
     font-family:Inter,Arial,sans-serif;
 }
 
-body{
-    background:#0f172a;
-    color:#fff;
+body {
+    background: red !important;
 }
 
 .container{
