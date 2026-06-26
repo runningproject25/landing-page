@@ -3,237 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>BuildWithEAI - Plan, Design, Build dengan AI</title>
-
-    <meta name="description"
-        content="Pendampingan pengembangan website, aplikasi skripsi, dashboard, dan sistem bisnis menggunakan pendekatan Plan • Design • Build dengan bantuan AI.">
-
-    <meta name="keywords"
-        content="AI Coding, Vibe Coding, Jasa Website, Pendampingan Skripsi, Software Engineering, ERD, Sequence Diagram, Dashboard, Website AI">
-
+    <title>BuildWithEAI — Plan, Design, Build</title>
+    <meta name="description" content="Pendampingan pengembangan website dan aplikasi skripsi menggunakan metode Plan • Design • Build dengan AI. Hasil terstruktur, bisa dipertanggungjawabkan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-    <div class="logo">BuildWithEAI</div>
-
-    <div class="menu">
-        <a href="#layanan">Layanan</a>
-        <a href="#proses">Proses</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#kontak">Kontak</a>
+<!-- ======= NAVBAR ======= -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="#" class="logo">BuildWith<span>EAI</span></a>
+        <div class="menu">
+            <a href="#layanan">Layanan</a>
+            <a href="#proses">Proses</a>
+            <a href="#hasil">Hasil</a>
+            <a href="#faq">FAQ</a>
+        </div>
+        <a href="https://wa.me/6285255205091" class="btn-nav">Konsultasi Gratis →</a>
     </div>
 </nav>
 
+<!-- ======= HERO ======= -->
 <header class="hero">
+    <div class="hero-inner">
 
-    <div class="hero-content">
-
-        <span class="tagline">
-            PLAN • DESIGN • BUILD
-        </span>
+        <div class="hero-label">Tersedia untuk proyek skripsi & bisnis</div>
 
         <h1>
-            Bangun Website dan Aplikasi
-            dengan AI yang Terarah
+            AI yang terarah<br>
+            menghasilkan aplikasi<br>
+            <span class="grad">yang bisa dipertanggungjawabkan.</span>
         </h1>
 
-        <p>
-            Jangan langsung coding.
-            Rancang sistem, desain alur,
-            lalu gunakan AI untuk membangun
-            aplikasi yang lebih cepat dan lebih tepat.
+        <p class="hero-sub">
+            Banyak yang pakai AI untuk coding, tapi hasilnya berantakan.
+            Kami ajarkan cara yang benar — rancang dulu, baru bangun.
         </p>
 
-        <a href="https://wa.me/628XXXXXXXXXX"
-           class="btn-primary">
-           Konsultasi Gratis
-        </a>
+        <div class="hero-cta">
+            <a href="https://wa.me/6285255205091" class="btn-primary">Mulai Konsultasi Gratis</a>
+            <a href="#proses" class="btn-ghost">Lihat Metode Kami ↓</a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-num">15+</span>
+                <span class="stat-label">Proyek selesai</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat">
+                <span class="stat-num">8–12</span>
+                <span class="stat-label">Sesi per proyek</span>
+            </div>
+            <div class="stat-div"></div>
+            <div class="stat">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Klien paham aplikasinya</span>
+            </div>
+        </div>
 
     </div>
 
+    <div class="hero-visual" aria-hidden="true">
+        <div class="code-card">
+            <div class="code-header">
+                <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+                <span class="code-title">sentiment_analysis.py</span>
+            </div>
+            <pre class="code-body"><span class="kw">from</span> flask <span class="kw">import</span> Flask, jsonify
+<span class="kw">from</span> model <span class="kw">import</span> predict_sentiment
+
+app = Flask(__name__)
+
+<span class="fn">@app.route</span>(<span class="str">'/api/predict'</span>, methods=[<span class="str">'POST'</span>])
+<span class="kw">def</span> <span class="fn">predict</span>():
+    text = request.json[<span class="str">'text'</span>]
+    result = predict_sentiment(text)
+    <span class="kw">return</span> jsonify({
+        <span class="str">'label'</span>: result.label,
+        <span class="str">'confidence'</span>: result.score
+    })</pre>
+            <div class="code-badge">✓ Siap dipresentasikan ke penguji</div>
+        </div>
+    </div>
 </header>
 
+<!-- ======= PROBLEM ======= -->
 <section class="problem">
-
     <div class="container">
+        <div class="section-label">Masalah yang sering terjadi</div>
+        <h2>Mengapa hasil AI <em>coding</em> sering gagal?</h2>
+        <p class="section-sub">AI tidak salah. Masalahnya ada di cara memberikan instruksi ke AI.</p>
 
-        <h2>Mengapa Banyak Hasil AI Tidak Sesuai Harapan?</h2>
+        <div class="problem-grid">
+            <div class="problem-card bad">
+                <div class="problem-icon">✗</div>
+                <h3>Tanpa rancangan</h3>
+                <p>Langsung minta AI buat aplikasi tanpa ERD, sequence diagram, atau wireframe. Hasilnya tidak sesuai kebutuhan sistem nyata.</p>
+            </div>
+            <div class="problem-card bad">
+                <div class="problem-icon">✗</div>
+                <h3>Prompt asal-asalan</h3>
+                <p>Instruksi ke AI tidak spesifik dan tidak terstruktur. AI hanya menebak apa yang dimaksud, bukan membangun apa yang dibutuhkan.</p>
+            </div>
+            <div class="problem-card bad">
+                <div class="problem-icon">✗</div>
+                <h3>Tidak bisa dijawab</h3>
+                <p>Saat presentasi atau sidang, tidak bisa menjelaskan kenapa kode dibuat begitu. Penguji langsung curiga.</p>
+            </div>
+        </div>
 
-        <p>
-            AI tidak gagal karena AI-nya buruk.
-            AI gagal karena tidak diberi rancangan yang jelas.
-        </p>
+        <div class="problem-vs">
+            <div class="vs-badge">Solusinya →</div>
+        </div>
+    </div>
+</section>
 
-        <div class="cards">
+<!-- ======= PROSES ======= -->
+<section id="proses" class="process">
+    <div class="container">
+        <div class="section-label">Metode kerja kami</div>
+        <h2>Plan · Design · Build</h2>
+        <p class="section-sub">Tiga fase yang memastikan kamu tidak hanya punya aplikasi, tapi benar-benar mengerti cara kerjanya.</p>
 
-            <div class="card">
-                <h3>Tanpa Perencanaan</h3>
-                <p>
-                    Langsung meminta AI membuat aplikasi
-                    tanpa memahami kebutuhan sistem.
-                </p>
+        <div class="process-steps">
+
+            <div class="process-step">
+                <div class="step-num">01</div>
+                <div class="step-body">
+                    <h3>Plan</h3>
+                    <p>Analisis kebutuhan sistem, use case, arsitektur, pemilihan tech stack, dan perencanaan database dari awal.</p>
+                    <ul class="step-list">
+                        <li>Use case diagram</li>
+                        <li>Pemilihan algoritma & tech stack</li>
+                        <li>Arsitektur sistem</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>Tanpa Desain</h3>
-                <p>
-                    Tidak memiliki UI, ERD,
-                    sequence diagram, dan alur bisnis.
-                </p>
+            <div class="process-connector" aria-hidden="true"></div>
+
+            <div class="process-step">
+                <div class="step-num">02</div>
+                <div class="step-body">
+                    <h3>Design</h3>
+                    <p>Rancang semua artefak teknis sebelum menulis kode. Ini yang membuat AI coding menghasilkan kode yang masuk akal.</p>
+                    <ul class="step-list">
+                        <li>Wireframe & UI mockup</li>
+                        <li>ERD & skema database</li>
+                        <li>Sequence & activity diagram</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>Prompt Tidak Terarah</h3>
-                <p>
-                    AI hanya mengikuti instruksi yang diberikan.
-                </p>
+            <div class="process-connector" aria-hidden="true"></div>
+
+            <div class="process-step">
+                <div class="step-num">03</div>
+                <div class="step-body">
+                    <h3>Build</h3>
+                    <p>Baru di fase ini AI digunakan untuk menghasilkan kode. Karena rancangan sudah ada, hasilnya jauh lebih akurat.</p>
+                    <ul class="step-list">
+                        <li>AI-assisted coding dengan prompt terarah</li>
+                        <li>Testing & debugging bersama</li>
+                        <li>Deploy & dokumentasi</li>
+                    </ul>
+                </div>
             </div>
 
         </div>
-
     </div>
-
 </section>
 
-<section id="proses">
-
+<!-- ======= LAYANAN ======= -->
+<section id="layanan" class="services">
     <div class="container">
-
-        <h2>Metode Kami</h2>
-
-        <div class="steps">
-
-            <div class="step">
-                <span>01</span>
-                <h3>Plan</h3>
-                <p>
-                    Analisis kebutuhan, use case,
-                    arsitektur, database, dan teknologi.
-                </p>
-            </div>
-
-            <div class="step">
-                <span>02</span>
-                <h3>Design</h3>
-                <p>
-                    UI/UX, wireframe,
-                    ERD, sequence diagram,
-                    dan alur aplikasi.
-                </p>
-            </div>
-
-            <div class="step">
-                <span>03</span>
-                <h3>Build</h3>
-                <p>
-                    AI membantu menghasilkan kode
-                    berdasarkan rancangan yang telah dibuat.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="layanan">
-
-    <div class="container">
-
+        <div class="section-label">Yang bisa kami bantu</div>
         <h2>Layanan</h2>
 
-        <div class="services">
+        <div class="service-grid">
 
-            <div class="service">
-                Pendampingan Skripsi Berbasis AI
+            <div class="service-card featured">
+                <div class="service-tag">Paling banyak diminati</div>
+                <div class="service-icon">🎓</div>
+                <h3>Pendampingan Skripsi Berbasis AI</h3>
+                <p>Untuk mahasiswa yang harus membangun aplikasi sebagai objek penelitian skripsi. Kamu dipandu dari awal hingga bisa menjelaskan sendiri ke penguji.</p>
+                <ul class="service-list">
+                    <li>✓ Sentiment analysis, klasifikasi teks</li>
+                    <li>✓ Naive Bayes, SVM, Random Forest</li>
+                    <li>✓ Web scraping & preprocessing data</li>
+                    <li>✓ Flask + MySQL + Bootstrap</li>
+                    <li>✓ Siap sampai seminar hasil</li>
+                </ul>
+                <div class="service-price">
+                    <span class="price-label">Mulai dari</span>
+                    <span class="price-num">Rp 3,5 jt</span>
+                    <span class="price-note">/ proyek · 8–12 sesi</span>
+                </div>
+                <a href="https://wa.me/6285255205091?text=Halo,%20saya%20ingin%20konsultasi%20pendampingan%20skripsi" class="btn-primary">Tanya Sekarang →</a>
             </div>
 
-            <div class="service">
-                Website Company Profile
-            </div>
-
-            <div class="service">
-                Toko Online
-            </div>
-
-            <div class="service">
-                Dashboard Bisnis
-            </div>
-
-            <div class="service">
-                Sistem Informasi
-            </div>
-
-            <div class="service">
-                Review Prompt AI Coding
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="portfolio">
-
-    <div class="container">
-
-        <h2>Portfolio</h2>
-
-        <div class="portfolio-grid">
-
-            <div class="portfolio-card">
-                Website Wisata Interaktif
-            </div>
-
-            <div class="portfolio-card">
-                Dashboard Analitik
-            </div>
-
-            <div class="portfolio-card">
-                Sistem Informasi Akademik
+            <div class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>Buat Toko Online Sendiri</h3>
+                <p>Punya bisnis dan mau punya website toko sendiri? Kami bantu rancang dan bangun dengan AI, kamu bisa kelola sendiri setelah selesai.</p>
+                <ul class="service-list">
+                    <li>✓ Desain sesuai brand kamu</li>
+                    <li>✓ Produk, keranjang, checkout</li>
+                    <li>✓ Admin dashboard</li>
+                    <li>✓ Training pengelolaan mandiri</li>
+                </ul>
+                <div class="service-price">
+                    <span class="price-label">Mulai dari</span>
+                    <span class="price-num">Rp 2 jt</span>
+                    <span class="price-note">/ proyek</span>
+                </div>
+                <a href="https://wa.me/6285255205091?text=Halo,%20saya%20ingin%20buat%20toko%20online" class="btn-outline">Diskusi Dulu →</a>
             </div>
 
         </div>
-
     </div>
-
 </section>
 
-<section class="cta" id="kontak">
-
+<!-- ======= HASIL / SOCIAL PROOF ======= -->
+<section id="hasil" class="testimonials">
     <div class="container">
+        <div class="section-label">Kata klien kami</div>
+        <h2>Hasil yang nyata</h2>
 
-        <h2>
-            Siap Membangun Aplikasi dengan AI?
-        </h2>
+        <div class="testi-grid">
 
-        <p>
-            Mulailah dengan rancangan sistem yang benar.
-        </p>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p>"Awalnya bingung harus mulai dari mana. Setelah ikut pendampingan, akhirnya ngerti kenapa kode dibuat begitu dan bisa jawab pertanyaan penguji dengan lancar."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">NF</div>
+                    <div>
+                        <strong>Nur F.</strong>
+                        <span>Mahasiswa S1 Informatika</span>
+                    </div>
+                </div>
+            </div>
 
-        <a href="https://wa.me/628XXXXXXXXXX"
-           class="btn-primary">
-            Hubungi Sekarang
-        </a>
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p>"Yang bikin beda dari joki biasa adalah aku benar-benar ngerti sistemku sendiri. ERD-nya aku yang rancang, flownya aku yang tentukan — AI cuma bantu nulis kodenya."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">RA</div>
+                    <div>
+                        <strong>Rizky A.</strong>
+                        <span>Mahasiswa S1, skripsi sentiment analysis</span>
+                    </div>
+                </div>
+            </div>
 
+            <div class="testi-card">
+                <div class="testi-stars">★★★★★</div>
+                <p>"Proses dari wireframe sampai deploy sekitar 10 sesi. Sistemnya jalan, datanya akurat, dan penguji terkesan dengan dokumentasinya yang lengkap."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">AS</div>
+                    <div>
+                        <strong>Andi S.</strong>
+                        <span>Mahasiswa S1, lulus seminar hasil</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-
 </section>
 
+<!-- ======= FAQ ======= -->
+<section id="faq" class="faq">
+    <div class="container">
+        <div class="section-label">Pertanyaan umum</div>
+        <h2>FAQ</h2>
+
+        <div class="faq-list">
+
+            <details class="faq-item">
+                <summary>Apa bedanya dengan joki skripsi?</summary>
+                <div class="faq-body">
+                    <p>Joki skripsi membuatkan aplikasi untuk kamu. Kami mendampingi kamu membangun aplikasimu sendiri. Kamu yang merancang sistem, kamu yang menentukan desain, AI hanya membantu menulis kode berdasarkan rancanganmu. Hasilnya: kamu benar-benar mengerti aplikasinya dan bisa mempertanggungjawabkannya di depan penguji.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Berapa lama prosesnya?</summary>
+                <div class="faq-body">
+                    <p>Rata-rata 8–12 sesi, dengan durasi 90 menit per sesi, 2–3 kali per minggu. Jadi total sekitar 4–6 minggu. Durasi bisa lebih singkat atau lebih panjang tergantung kompleksitas sistem dan kecepatan belajar.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Tech stack apa yang digunakan untuk skripsi?</summary>
+                <div class="faq-body">
+                    <p>Untuk proyek machine learning dan sentiment analysis: <strong>Python + Flask</strong> untuk backend, <strong>MySQL</strong> untuk database, <strong>Bootstrap + Jinja2</strong> untuk frontend. Stack ini cocok untuk skripsi karena ringan, mudah dipahami, dan banyak referensi akademiknya.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Apakah saya perlu bisa coding sebelumnya?</summary>
+                <div class="faq-body">
+                    <p>Tidak harus. Yang lebih penting adalah kamu mau belajar dan memahami logika sistem. Pengalaman dasar pemrograman membantu, tapi kami mulai dari dasar dan menjelaskan setiap langkahnya.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Bagaimana sistem pembayarannya?</summary>
+                <div class="faq-body">
+                    <p>Pembayaran dibagi dua: 50% di awal sebelum sesi pertama, 50% setelah aplikasi terlihat berjalan dan fungsionalitas utama sudah selesai. Tidak ada biaya tersembunyi di luar yang disepakati di awal.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Sesi dilakukan secara online atau offline?</summary>
+                <div class="faq-body">
+                    <p>Bisa keduanya. Sesi online melalui Google Meet atau Zoom dengan screen sharing. Untuk klien di Makassar dan sekitarnya, bisa juga offline sesuai kesepakatan.</p>
+                </div>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+<!-- ======= CTA ======= -->
+<section class="cta-final">
+    <div class="container">
+        <div class="cta-box">
+            <div class="cta-label">Mulai sekarang</div>
+            <h2>Siap bangun aplikasimu dengan cara yang benar?</h2>
+            <p>Konsultasi pertama gratis. Ceritakan proyekmu dan kami bantu tentukan langkah terbaiknya.</p>
+            <a href="https://wa.me/6285255205091?text=Halo,%20saya%20ingin%20konsultasi%20gratis%20untuk%20proyek%20saya" class="btn-primary btn-large">
+                Chat di WhatsApp →
+            </a>
+            <p class="cta-note">Biasanya dibalas dalam 1–2 jam pada jam kerja.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
 <footer>
-
-    <h3>BuildWithEAI</h3>
-
-    <p>
-        Plan • Design • Build
-    </p>
-
+    <div class="container">
+        <div class="footer-inner">
+            <div>
+                <div class="logo">BuildWith<span>EAI</span></div>
+                <p class="footer-tagline">Plan · Design · Build</p>
+            </div>
+            <div class="footer-links">
+                <a href="#layanan">Layanan</a>
+                <a href="#proses">Proses</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://wa.me/6285255205091">WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BuildWithEAI. Makassar, Indonesia.</p>
+        </div>
+    </div>
 </footer>
+
+<script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Smooth reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.process-step, .problem-card, .service-card, .testi-card, .faq-item')
+        .forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+</script>
 
 </body>
 </html>
