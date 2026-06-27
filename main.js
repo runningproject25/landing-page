@@ -1,6 +1,6 @@
 /* ============================================
-   main.js — BuildWithAI (GitHub Pages ready)
-   Navbar · Hamburger · Reveal · FAQ Accordion
+   main.js — BuildWithAI v2
+   Navbar · Hamburger · Reveal · FAQ · Scroll
 ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger?.addEventListener('click', () => {
         hamburger.classList.toggle('open');
         menu.classList.toggle('open');
-        document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+        document.body.style.overflow =
+            menu.classList.contains('open') ? 'hidden' : '';
     });
 
     document.querySelectorAll('.nav-link').forEach(link => {
@@ -51,41 +52,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ── 4. SCROLL REVEAL ───────────────────────────
-    const observer = new IntersectionObserver((entries) => {
+    const revealObs = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
-
-            // Stagger: delay berdasarkan urutan dalam parent
             const siblings = [...entry.target.parentElement.children]
                 .filter(el => el.classList.contains('reveal'));
             const idx = siblings.indexOf(entry.target);
             entry.target.style.transitionDelay = `${idx * 100}ms`;
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+            revealObs.unobserve(entry.target);
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
     // ── 5. FAQ ACCORDION ───────────────────────────
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-        const btn = item.querySelector('.faq-q');
-
-        btn.addEventListener('click', () => {
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.querySelector('.faq-q').addEventListener('click', () => {
             const isOpen = item.classList.contains('open');
 
-            // Tutup semua dulu
-            faqItems.forEach(i => {
+            // Tutup semua
+            document.querySelectorAll('.faq-item').forEach(i => {
                 i.classList.remove('open');
                 i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
             });
 
-            // Buka yang diklik (kalau belum open)
+            // Buka yang diklik
             if (!isOpen) {
                 item.classList.add('open');
-                btn.setAttribute('aria-expanded', 'true');
+                item.querySelector('.faq-q').setAttribute('aria-expanded', 'true');
             }
         });
     });
@@ -96,9 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const target = document.querySelector(anchor.getAttribute('href'));
             if (!target) return;
             e.preventDefault();
-            const offset = navbar.offsetHeight + 16;
             window.scrollTo({
-                top: target.offsetTop - offset,
+                top: target.offsetTop - navbar.offsetHeight - 16,
                 behavior: 'smooth'
             });
         });

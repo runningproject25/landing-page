@@ -8,23 +8,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <!-- ====== NAVBAR ====== -->
 <nav id="navbar">
     <div class="nav-inner">
-        <a href="#" class="logo">
+        <a href="#beranda" class="logo">
             <span class="logo-icon">b<span class="logo-dot">i</span></span>
             buildwith<span class="logo-accent">AI</span>
         </a>
 
         <div class="menu" id="menu">
-            <a href="#beranda" class="nav-link active">Beranda</a>
-            <a href="#layanan" class="nav-link">Layanan</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-            <a href="#tentang" class="nav-link">Tentang Kami</a>
+            <a href="#beranda"  class="nav-link active">Beranda</a>
+            <a href="#layanan"  class="nav-link">Layanan</a>
+            <a href="#portfolio" class="nav-link">Portofolio</a>
+            <a href="#tentang"  class="nav-link">Tentang Kami</a>
         </div>
 
         <a href="https://wa.me/6285255205091?text=Halo%2C%20saya%20ingin%20pesan%20jasa%20BuildWithAI"
@@ -40,28 +40,30 @@
 
 <!-- ====== HERO ====== -->
 <section id="beranda" class="hero">
-    <div class="hero-inner">
+    <div class="container">
+        <div class="hero-inner">
 
-        <div class="hero-badge">
-            <span class="badge-dot"></span>
-            BIMBINGAN PEMBUATAN WEBSITE DENGAN AI
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                BIMBINGAN PEMBUATAN WEBSITE DENGAN AI
+            </div>
+
+            <p class="hero-sub-top">Plan &bull; Design &bull; Generate</p>
+
+            <h1>
+                Build Your website Faster<br>
+                <span class="hero-accent">With Us</span>
+            </h1>
+
+            <a href="#metode" class="btn-metode">Metode Kami →</a>
+
         </div>
-
-        <p class="hero-sub-top">Plan &bull; Design &bull; Generate</p>
-
-        <h1>
-            Build Your website Faster<br>
-            <span class="hero-accent">With Us</span>
-        </h1>
-
-        <a href="#metode" class="btn-metode">Metode Kami →</a>
-
     </div>
 
-    <!-- Dekorasi gelombang bawah -->
+    <!-- Gelombang bawah hero -->
     <div class="hero-wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#ffffff"/>
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z" fill="#f8fafc"/>
         </svg>
     </div>
 </section>
@@ -71,9 +73,9 @@
     <div class="container">
 
         <div class="section-label-wrap">
-            <span class="dot-blue"></span>
+            <span class="dot-accent"></span>
             <span class="section-label-text">METODE KAMI</span>
-            <span class="dot-blue"></span>
+            <span class="dot-accent"></span>
         </div>
 
         <h2>Metode Pembuatan Aplikasi dengan AI</h2>
@@ -82,12 +84,11 @@
 
             <!-- Step 1 -->
             <div class="metode-step reveal">
-                <div class="step-left">
-                    <div class="step-num">1</div>
-                </div>
-                <div class="step-right">
+                <div class="step-num">1</div>
+                <div class="step-card">
                     <div class="step-icon-wrap">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <!-- User icon -->
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                             <circle cx="9" cy="7" r="4"/>
                             <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -101,19 +102,16 @@
                 </div>
             </div>
 
-            <!-- Connector -->
-            <div class="step-connector" aria-hidden="true">
-                <span class="connector-dot"></span>
-            </div>
+            <!-- Konektor -->
+            <div class="step-connector" aria-hidden="true"></div>
 
             <!-- Step 2 -->
             <div class="metode-step reveal">
-                <div class="step-left">
-                    <div class="step-num">2</div>
-                </div>
-                <div class="step-right">
+                <div class="step-num">2</div>
+                <div class="step-card">
                     <div class="step-icon-wrap">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <!-- Edit icon -->
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
                             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
                         </svg>
@@ -125,47 +123,58 @@
                 </div>
             </div>
 
-            <!-- Sub cards perancangan -->
+            <!-- Sub cards -->
             <div class="sub-cards reveal">
                 <div class="sub-card">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                    </svg>
                     <span>UX / UI</span>
                 </div>
-                <div class="sub-arrow">→</div>
+                <span class="sub-arrow">→</span>
                 <div class="sub-card">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="6" height="6" rx="1"/><rect x="16" y="7" width="6" height="6" rx="1"/><rect x="9" y="14" width="6" height="6" rx="1"/><path d="M5 13v2a2 2 0 0 0 2 2h2M17 13v2a2 2 0 0 1-2 2h-2"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="6" height="6" rx="1"/><rect x="16" y="7" width="6" height="6" rx="1"/>
+                        <rect x="9" y="14" width="6" height="6" rx="1"/>
+                        <path d="M5 13v2a2 2 0 0 0 2 2h2M17 13v2a2 2 0 0 1-2 2h-2"/>
+                    </svg>
                     <span>Arsitektur</span>
                 </div>
-                <div class="sub-arrow">→</div>
+                <span class="sub-arrow">→</span>
                 <div class="sub-card">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                    </svg>
                     <span>ERD</span>
                 </div>
-                <div class="sub-arrow">→</div>
+                <span class="sub-arrow">→</span>
                 <div class="sub-card">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/>
+                    </svg>
                     <span>API</span>
                 </div>
-                <div class="sub-arrow">→</div>
+                <span class="sub-arrow">→</span>
                 <div class="sub-card active">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
                     <span>Sequence diagram</span>
                 </div>
             </div>
 
-            <!-- Connector -->
-            <div class="step-connector" aria-hidden="true">
-                <span class="connector-dot"></span>
-            </div>
+            <!-- Konektor -->
+            <div class="step-connector" aria-hidden="true"></div>
 
             <!-- Step 3 -->
             <div class="metode-step reveal">
-                <div class="step-left">
-                    <div class="step-num">3</div>
-                </div>
-                <div class="step-right">
+                <div class="step-num">3</div>
+                <div class="step-card">
                     <div class="step-icon-wrap">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <!-- Code icon -->
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="16 18 22 12 16 6"/>
                             <polyline points="8 6 2 12 8 18"/>
                         </svg>
@@ -186,71 +195,60 @@
     <div class="container">
 
         <div class="section-label-wrap">
-            <span class="dot-blue"></span>
+            <span class="dot-accent"></span>
             <span class="section-label-text">PORTFOLIO</span>
-            <span class="dot-blue"></span>
+            <span class="dot-accent"></span>
         </div>
 
         <h2>Beberapa Hasil Pekerjaan Kami</h2>
-        <p class="section-sub">Proyek nyata, solusi nyata, hasil nyata.</p>
 
         <div class="portfolio-grid">
 
+            <!-- Card 1 — ganti src & href sesuai proyekmu -->
             <div class="portfolio-card reveal">
                 <div class="portfolio-img-wrap">
-                    <!-- Ganti src dengan path foto kamu -->
-                    <img src="assets/img/portfolio/project1.jpg" alt="Aplikasi Pemesanan Makanan"
-                         onerror="this.parentElement.classList.add('no-img'); this.remove();">
-                    <div class="portfolio-placeholder">AP</div>
+                    <img src="assets/img/portfolio/project1.jpg"
+                         alt="Sistem Prediksi Penjualan"
+                         onerror="this.parentElement.classList.add('no-img');this.remove()">
+                    <div class="portfolio-placeholder">SP</div>
                 </div>
                 <div class="portfolio-info">
-                    <span class="portfolio-cat">Web Application</span>
-                    <h4>Aplikasi Pemesanan Makanan</h4>
-                    <div class="portfolio-techs">
-                        <span class="tech-badge">Flask</span>
-                        <span class="tech-badge">MySQL</span>
-                        <span class="tech-badge">Bootstrap</span>
-                    </div>
+                    <h4>Sistem Prediksi Penjualan</h4>
+                    <p>Aplikasi prediksi penjualan menggunakan algoritma machine learning.</p>
                     <a href="https://github.com/" target="_blank" rel="noopener" class="portfolio-link">
                         Lihat Proyek ↗
                     </a>
                 </div>
             </div>
 
+            <!-- Card 2 -->
             <div class="portfolio-card reveal">
                 <div class="portfolio-img-wrap">
-                    <img src="assets/img/portfolio/project2.jpg" alt="Dashboard Analitik"
-                         onerror="this.parentElement.classList.add('no-img'); this.remove();">
+                    <img src="assets/img/portfolio/project2.jpg"
+                         alt="Sistem Manajemen Klinik"
+                         onerror="this.parentElement.classList.add('no-img');this.remove()">
+                    <div class="portfolio-placeholder">MK</div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Sistem Manajemen Klinik</h4>
+                    <p>Sistem manajemen data pasien, jadwal dokter, dan rekam medis.</p>
+                    <a href="https://github.com/" target="_blank" rel="noopener" class="portfolio-link">
+                        Lihat Proyek ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="portfolio-card reveal">
+                <div class="portfolio-img-wrap">
+                    <img src="assets/img/portfolio/project3.jpg"
+                         alt="Dashboard Analitik Penjualan"
+                         onerror="this.parentElement.classList.add('no-img');this.remove()">
                     <div class="portfolio-placeholder">DA</div>
                 </div>
                 <div class="portfolio-info">
-                    <span class="portfolio-cat">Dashboard</span>
                     <h4>Dashboard Analitik Penjualan</h4>
-                    <div class="portfolio-techs">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Chart.js</span>
-                        <span class="tech-badge">Flask</span>
-                    </div>
-                    <a href="https://github.com/" target="_blank" rel="noopener" class="portfolio-link">
-                        Lihat Proyek ↗
-                    </a>
-                </div>
-            </div>
-
-            <div class="portfolio-card reveal">
-                <div class="portfolio-img-wrap">
-                    <img src="assets/img/portfolio/project3.jpg" alt="Analisis Sentimen"
-                         onerror="this.parentElement.classList.add('no-img'); this.remove();">
-                    <div class="portfolio-placeholder">AS</div>
-                </div>
-                <div class="portfolio-info">
-                    <span class="portfolio-cat">Web Application</span>
-                    <h4>Sistem Analisis Sentimen</h4>
-                    <div class="portfolio-techs">
-                        <span class="tech-badge">Naive Bayes</span>
-                        <span class="tech-badge">Flask</span>
-                        <span class="tech-badge">MySQL</span>
-                    </div>
+                    <p>Dashboard analitik untuk monitoring penjualan secara real-time.</p>
                     <a href="https://github.com/" target="_blank" rel="noopener" class="portfolio-link">
                         Lihat Proyek ↗
                     </a>
@@ -258,6 +256,14 @@
             </div>
 
         </div>
+
+        <div class="portfolio-more">
+            <a href="https://wa.me/6285255205091?text=Halo%2C%20saya%20ingin%20lihat%20portfolio%20lengkap"
+               target="_blank" rel="noopener" class="btn-more">
+                Lihat Portfolio Lainnya →
+            </a>
+        </div>
+
     </div>
 </section>
 
@@ -266,9 +272,9 @@
     <div class="container">
 
         <div class="section-label-wrap">
-            <span class="dot-blue"></span>
+            <span class="dot-accent"></span>
             <span class="section-label-text">PERTANYAAN UMUM</span>
-            <span class="dot-blue"></span>
+            <span class="dot-accent"></span>
         </div>
 
         <h2>FAQ</h2>
@@ -291,7 +297,7 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-a">
-                    <p>Ya, justru itulah kuncinya. AI coding menghasilkan kode yang jauh lebih akurat dan sesuai kebutuhan ketika diberi rancangan yang jelas — ERD, sequence diagram, dan wireframe. Tanpa rancangan, hasil AI sering meleset.</p>
+                    <p>Ya, justru itulah kuncinya. AI coding menghasilkan kode yang jauh lebih akurat ketika diberi rancangan yang jelas — ERD, sequence diagram, dan wireframe. Tanpa rancangan, hasil AI sering meleset.</p>
                 </div>
             </div>
 
@@ -301,7 +307,7 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-a">
-                    <p>Rata-rata 8–12 sesi dengan durasi 90 menit per sesi, 2–3 kali per minggu. Total sekitar 4–6 minggu tergantung kompleksitas sistem dan kecepatan belajar.</p>
+                    <p>Rata-rata 8–12 sesi dengan durasi 90 menit per sesi, 2–3 kali per minggu. Total sekitar 4–6 minggu tergantung kompleksitas sistem.</p>
                 </div>
             </div>
 
@@ -311,7 +317,7 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-a">
-                    <p>Dimulai dari analisis kebutuhan → perancangan sistem (ERD, wireframe, sequence diagram) → baru coding dengan bantuan AI → testing & debugging → deploy & dokumentasi. Setiap tahap dikerjakan bersama-sama.</p>
+                    <p>Dimulai dari analisis kebutuhan → perancangan sistem (ERD, wireframe, sequence diagram) → coding dengan bantuan AI → testing & debugging → deploy & dokumentasi. Setiap tahap dikerjakan bersama-sama.</p>
                 </div>
             </div>
 
@@ -327,21 +333,21 @@
 
             <div class="faq-item">
                 <button class="faq-q" aria-expanded="false">
-                    <span>Mahal sekali, ada diskon?</span>
+                    <span>mahal sekali, ada diskon?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-a">
-                    <p>Harga sudah disesuaikan dengan value yang didapat — kamu tidak hanya dapat aplikasi, tapi juga pemahaman penuh tentang sistemnya. Bisa diskusikan dulu kebutuhan dan budget kamu, kami akan cari solusi terbaik.</p>
+                    <p>Harga sudah disesuaikan dengan value yang didapat. Bisa diskusikan dulu kebutuhan dan budget kamu, kami cari solusi terbaik bersama.</p>
                 </div>
             </div>
 
             <div class="faq-item">
                 <button class="faq-q" aria-expanded="false">
-                    <span>Berapa harga nya?</span>
+                    <span>berapa harga nya?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-a">
-                    <p>Harga mulai dari Rp 3,5 juta per proyek tergantung kompleksitas dan jumlah fitur. Hubungi kami untuk mendapatkan estimasi harga yang sesuai dengan kebutuhanmu.</p>
+                    <p>Harga mulai dari Rp 3,5 juta per proyek tergantung kompleksitas dan jumlah fitur. Hubungi kami untuk estimasi harga yang sesuai kebutuhanmu.</p>
                 </div>
             </div>
 
@@ -363,18 +369,19 @@
 <footer>
     <div class="container">
         <div class="footer-inner">
-            <a href="#" class="logo">
+            <a href="#beranda" class="logo">
                 <span class="logo-icon">b<span class="logo-dot">i</span></span>
                 buildwith<span class="logo-accent">AI</span>
             </a>
             <p>© 2025 buildwithAI. All rights reserved.</p>
-            <a href="https://wa.me/6285255205091" class="btn-pesan" target="_blank" rel="noopener">
+            <a href="https://wa.me/6285255205091"
+               class="btn-pesan" target="_blank" rel="noopener">
                 Hubungi Kami →
             </a>
         </div>
     </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
