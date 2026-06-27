@@ -4,36 +4,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-    /* Dark (hero & navbar) */
-    --dark:      #0b0e1a;
-    --dark-2:    #0f1221;
-    --dark-3:    #151929;
-    --dark-4:    #1e2438;
+    /* Dark hero & navbar — rose-tinted dark */
+    --dark:      #1a0f14;
+    --dark-2:    #21111a;
+    --dark-3:    #2b1622;
+    --dark-4:    #3d1e2e;
 
-    /* Light (metode, portfolio, faq) */
-    --light:     #f8fafc;
-    --light-2:   #f1f5f9;
-    --light-3:   #e2e8f0;
-    --text-dark: #0f172a;
-    --text-mid:  #334155;
-    --text-muted:#64748b;
+    /* Light sections */
+    --light:     #fff7f9;
+    --light-2:   #fdf0f4;
+    --light-3:   #fce4ec;
+    --text-dark: #2d1a22;
+    --text-mid:  #5c3347;
+    --text-muted:#9e6b80;
 
-    /* Brand */
-    --blue:      #3b82f6;
-    --blue-2:    #2563eb;
-    --blue-dim:  rgba(59,130,246,.1);
-    --blue-border: rgba(59,130,246,.25);
-    --cyan:      #22d3ee;
+    /* Brand — rose + lavender */
+    --blue:      #e0588a;   /* rose pink utama */
+    --blue-2:    #c94070;   /* rose lebih gelap (hover) */
+    --blue-dim:  rgba(224,88,138,.1);
+    --blue-border: rgba(224,88,138,.25);
+    --cyan:      #b57bee;   /* lavender accent */
     --white:     #ffffff;
 
     /* Misc */
-    --line-dark: rgba(255,255,255,.07);
-    --line-light:rgba(0,0,0,.08);
+    --line-dark: rgba(255,255,255,.08);
+    --line-light:rgba(0,0,0,.07);
     --radius:    12px;
     --radius-sm: 8px;
     --max:       960px;
-    --shadow:    0 4px 24px rgba(0,0,0,.08);
-    --shadow-md: 0 8px 32px rgba(0,0,0,.12);
+    --shadow:    0 4px 24px rgba(180,60,100,.08);
+    --shadow-md: 0 8px 32px rgba(180,60,100,.13);
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -142,25 +142,15 @@ section { padding:80px 0; }
     color:var(--white);
     flex-shrink:0;
 }
-.logo-icon {
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:34px; height:34px;
-    border-radius:9px;
-    background:var(--dark-4);
-    border:1px solid var(--line-dark);
-    font-size:0.85rem;
-    font-weight:700;
-    color:var(--white);
-    flex-shrink:0;
+.logo-img {
+    height:36px;
+    width:auto;
+    object-fit:contain;
 }
-.logo-dot { color:var(--blue); }
-.logo-accent {
-    background:linear-gradient(90deg,var(--blue),var(--cyan));
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
+.logo-img-footer {
+    height:32px;
+    /* Logo di footer — kalau logo gelap, pakai filter ini untuk versi putih:
+       filter: brightness(0) invert(1); */
 }
 
 .menu {
@@ -233,7 +223,7 @@ section { padding:80px 0; }
     padding:120px 0 0;
     position:relative;
     overflow:hidden;
-    background:linear-gradient(160deg,#0b0e1a 0%,#0f1a3a 55%,#0b1a2e 100%);
+    background:linear-gradient(160deg,#1a0f14 0%,#3d1028 55%,#1f0d1a 100%);
 }
 
 /* Glow kiri bawah */
@@ -241,7 +231,7 @@ section { padding:80px 0; }
     content:'';
     position:absolute;
     width:600px; height:600px;
-    background:radial-gradient(circle,rgba(59,130,246,.2) 0%,transparent 65%);
+    background:radial-gradient(circle,rgba(224,88,138,.2) 0%,transparent 65%);
     bottom:-150px; left:-80px;
     pointer-events:none;
 }
@@ -325,6 +315,7 @@ section { padding:80px 0; }
     pointer-events:none;
 }
 .hero-wave svg { width:100%; height:100%; }
+/* warna fill di HTML sudah #f8fafc, update via inline SVG di HTML */
 
 /* =====================
    METODE  (light bg)
@@ -633,7 +624,7 @@ footer {
     gap:20px;
     flex-wrap:wrap;
 }
-footer p{font-size:0.8rem; color:rgba(255,255,255,.4);}
+footer p{font-size:0.8rem; color:rgba(255,255,255,.35);}
 
 /* =====================
    RESPONSIVE
