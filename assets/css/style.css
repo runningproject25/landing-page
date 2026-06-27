@@ -19,11 +19,11 @@
     --text-muted:#9e6b80;
 
     /* Brand — rose + lavender */
-    --blue:      #e0588a;   /* rose pink utama */
-    --blue-2:    #c94070;   /* rose lebih gelap (hover) */
-    --blue-dim:  rgba(224,88,138,.1);
-    --blue-border: rgba(224,88,138,.25);
-    --cyan:      #b57bee;   /* lavender accent */
+    --blue:      #3b82f6;
+    --blue-2:    #2563eb;
+    --blue-dim:  rgba(59,130,246,.1);
+    --blue-border: rgba(59,130,246,.25);
+    --cyan:      #22d3ee;
     --white:     #ffffff;
 
     /* Misc */
