@@ -223,7 +223,7 @@ section { padding:80px 0; }
     padding:120px 0 0;
     position:relative;
     overflow:hidden;
-    background:linear-gradient(160deg,#1a0f14 0%,#3d1028 55%,#1f0d1a 100%);
+    background:linear-gradient(160deg,#0b0e1a 0%,#0f1a3a 55%,#0b1a2e 100%);
 }
 
 /* Glow kiri bawah */
@@ -231,8 +231,8 @@ section { padding:80px 0; }
     content:'';
     position:absolute;
     width:600px; height:600px;
-    background:radial-gradient(circle,rgba(224,88,138,.2) 0%,transparent 65%);
-    bottom:-150px; left:-80px;
+    background:radial-gradient(circle,rgba(161, 193, 245, 0.2) 0%,transparent 65%);
+    bottom:200px; right:-80px;
     pointer-events:none;
 }
 
