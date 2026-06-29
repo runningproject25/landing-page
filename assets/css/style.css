@@ -5,10 +5,10 @@
 
 :root {
     /* Dark hero & navbar — rose-tinted dark */
-    --dark:      #1a0f14;
-    --dark-2:    #21111a;
-    --dark-3:    #2b1622;
-    --dark-4:    #3d1e2e;
+    --dark:      #110f1a;
+    --dark-2:    #141121;
+    --dark-3:    #1a162b;
+    --dark-4:    #2c1e3d;
 
     /* Light sections */
     --light:     #fff7f9;
